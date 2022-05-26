@@ -26,7 +26,12 @@
 				</tr>
 				<tr>
 					<td>Faculty: </td>
-					<td><input type="text" name="facul" id="facul" value='<?php echo $row['faculty'];?>'></td>
+					<td><select name="faculty" id="faculty">
+						<option value="Science" <?php if($row['faculty']=="Science") echo "selected"?>>Science</option>
+						<option value="BBA" <?php if($row['faculty']=="BBA") echo "selected"?>>BBA</option>
+						<option value="Arts" <?php if($row['faculty']=="Arts") echo "selected"?>>Arts</option>
+						<option value="Social Science" <?php if($row['faculty']=="Social Science") echo "selected"?>>Social Science</option>
+					</select></td>
 				</tr>
 				<tr>
 					<td>Depertment: </td>
@@ -46,12 +51,12 @@
 				</tr>
 				<tr>
 					<td>Designation: </td>
-					<td><input type="text" name="desig" id="dsig" value='<?php echo $row['desig'];?>'></td>
+					<td><input type="text" name="desig" id="dsig" value='<?=$row['desig'];?>'></td>
 				</tr>
 				<tr>
 					<td>Submit : </td>
 					<td><input type="submit" name="Update" value="Update"></td>
-					<input type="text" name="id"  value="<?php echo $row['id'];?>" hidden>
+					<input type="number" name="id"  value="<?php echo $row['id'];?>" hidden>
 				</tr>
 </table>
 </form>
