@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Registation Form</title>
+        <style>
+            table, th, td {
+                border : 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Registration Form</h1><br>
+            <form name="register" action="registration.php" method="post">
+                <label for="user">Username:  </label>
+                <input type="text" id="user" name="user" value ="" placeholder="Username"><br><br>
+                <label for="pwd">Password:   </label>
+                <input type="password" id="pwd" name="pwd" placeholder="Password"><br><br>
+                <input type="submit" value="Register">
+                <p>Already Registered ? 
+                    <a href="login.php" alt="no login page">Login Here</a>
+            </form>
+    </body>
+</html>
